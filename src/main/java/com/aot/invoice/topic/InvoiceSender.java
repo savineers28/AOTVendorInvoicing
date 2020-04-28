@@ -26,7 +26,7 @@ public class InvoiceSender {
         settings.put(ProducerConfig.CLIENT_ID_CONFIG, "OrderProducerGroup");
         settings.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         settings.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        settings.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_SSL");
+        /*settings.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_SSL");
         settings.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, "/app/apps/AOTVendorInvoicing/src/main/java/com/aot/invoice/jks/kafka.truststore.jks");
         settings.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, "test123");
         settings.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, "/app/apps/AOTVendorInvoicing/src/main/java/com/aot/invoice/jks/kafka.keystore.jks");
@@ -34,6 +34,7 @@ public class InvoiceSender {
         settings.put(SslConfigs.SSL_KEY_PASSWORD_CONFIG, "test123");
         settings.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
         settings.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"" + "user" + "\" password=\"" + "password" + "\";");
+        */
         return new KafkaProducer<>(settings);
     }
 
